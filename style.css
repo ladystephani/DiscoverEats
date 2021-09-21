@@ -1,18 +1,1 @@
-* {
-    margin: 25px 50px;
-    padding: 20px;
-}
 
-.wrapper {
-    margin: 0 auto;
-    width: 1000px;
-}
-
-.img-NYC {
-    width: 300px;
-    height: 200px;
-    background-image: url(img/IMG_0688.jpeg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
