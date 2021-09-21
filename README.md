@@ -10,6 +10,7 @@ This website is designed to help users find restaurants when they are looking fo
 
 ![DiscoverEats App ScreenShot](assets/images/WDS.PNG)
 
+![IMG_0688](https://user-images.githubusercontent.com/86330664/134235853-35268891-4826-41ac-886f-a61f1b368e5d.jpeg)
 ## Built With
 * HTML
 * CSS
