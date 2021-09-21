@@ -28,6 +28,20 @@
     margin-top: 200px;
 }
 
+.list-group {
+    padding: 0;
+    list-style: none;
+}
+
+.list-item {
+    margin-bottom: 10px;
+    padding: 1.5%;
+    border-radius: var(--border-radius);
+    background-color: var(--light-dark);
+    color: var(--primary);
+    text-decoration: none;
+}
+
 #footer {
     position: absolute;
     bottom: 0;
