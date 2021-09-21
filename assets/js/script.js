@@ -1,4 +1,5 @@
-
+var userFormEl = document.querySelector("#user-form");
+var restaurantEl = document.querySelector("#zipcode-entry");
 
 var getRestaurantInfo = function(zipcode) {
     // format the restaurant API url
@@ -13,5 +14,17 @@ var getRestaurantInfo = function(zipcode) {
 })
     
 }
-getRestaurantInfo(10016);
 
+var formSubmitHandler = function(event) {
+    event.preventDefault();
+    // get value from the input element
+    var zipcode = restaurantEl.value.trim();
+
+    if (zipcode) {
+        getRestaurantInfo(zipcode);
+        restaurantEl.value = "";
+    } else {
+        alert("Please enter a zipcode")
+    }
+}
+userFormEl.addEventListener("submit", formSubmitHandler);
