@@ -23,6 +23,7 @@ Link to the GIT repository: <br>
 https://github.com/Hiroshi777300ER/DiscoverEats
 
 Link to the Live Page: <br>
+https://hiroshi777300er.github.io/DiscoverEats/
 
 ## Contribution
 Made with ❤️ by Mohammad Ibrahim, Hiroshi Tanaka, and Jessie Li.
