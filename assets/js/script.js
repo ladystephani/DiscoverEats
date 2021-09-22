@@ -2,10 +2,15 @@ const userFormEl = document.querySelector("#user-form");
 const restaurantEl = document.querySelector("#zipcode-entry");
 const restaurantContainerEl = document.querySelector("#restaurant-container");
 const restaurantSearchTerm = document.querySelector("#restaurant-search-term");
+let  subtitle = document.querySelector(".subtitle");
+let  message = document.querySelector("#message");
+
 
 const displayRestaurants = function(restaurants, zipcode) {
     // console.log(restaurants);
     // console.log(zipcode);
+
+   
 
     // error handler: check if API returned any restaurant data
     if (restaurants.data.length === 0) {
@@ -16,6 +21,7 @@ const displayRestaurants = function(restaurants, zipcode) {
     //clear old content every time search is performed
     restaurantContainerEl.textContent = "";
     restaurantSearchTerm.textContent = zipcode;
+
 
     // loop over restaurants
     for (let i = 0; i < 6; i++) {
@@ -101,6 +107,9 @@ const formSubmitHandler = function(event) {
     if (zipcode) {
         getRestaurantInfo(zipcode);
         restaurantEl.value = "";
+        // stops hiding subtitle and message from html 
+        message.classList.remove('hide');
+        subtitle.classList.remove('hide');
     } else {
         alert("Please enter a zipcode")
     }
