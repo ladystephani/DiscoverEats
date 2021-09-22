@@ -74,7 +74,7 @@ const displayRestaurants = function(restaurants, zipcode) {
 
 const getRestaurantInfo = function(zipcode) {
     // format the restaurant API url
-    const apiUrl = 'https://api.documenu.com/v2/restaurants/zip_code/' + zipcode + '?key=57aa84dc45dd3fe2fce56f8a1fe01f43'
+    const apiUrl = 'https://api.documenu.com/v2/restaurants/zip_code/' + zipcode + '?key=45fcd1416d099b3d960f5878c61f0700'
     
     // make a request to the url
     fetch(apiUrl).then(function(response) {
