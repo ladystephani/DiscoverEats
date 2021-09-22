@@ -1,12 +1,13 @@
 # DiscoverEats
-An app to assist people to search for restaurants in New York City based on specific zip codes.
-
-## Description
-This is a simple app to help assist people to search for restaurants in New York City based on specific zip codes.
- This app will run in the browser and is made with HTML, CSS, JavaScript and Materialize UI. 
-This website is designed to help users find restaurants when they are looking for something to eat. 
+(story to build up app)
+(3 types of scenarios where this app will be useful)
+DiscoverEats - the best way to find restaurants in the food capital of the world.
+This app runs in the browser and assists people to search for restaurants in New York City.
+Users can search for specific zip codes to find top restaurant recommendations. 
+It is made with HTML, CSS, JavaScript and Materialize UI, as well as the Documenu API and  
 
 ## How It Works 
+GIF of how app works 
 
 ![DiscoverEats App ScreenShot](assets/images/WDS.PNG)
 
@@ -15,8 +16,9 @@ This website is designed to help users find restaurants when they are looking fo
 * HTML
 * CSS
 * JavaScript
-* jQuery
 * Materialize UI
+* Documenu API
+* Add API
 
 ## Website
 Link to the GIT repository: <br>

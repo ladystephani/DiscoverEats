@@ -18,13 +18,14 @@ const displayRestaurants = function(restaurants, zipcode) {
     restaurantSearchTerm.textContent = zipcode;
 
     // loop over restaurants
-    for (let i = 0; i < restaurants.data.length; i++) {
+    for (let i = 0; i < 6; i++) {
+        var random = Math.floor(Math.random() * 12)
         //create a constainer for each restaurant
         const resEl = document.createElement("div");
         resEl.classList = "list-item"
 
         //format the name line
-        const restaurantName =  restaurants.data[i].restaurant_name;
+        const restaurantName =  restaurants.data[random].restaurant_name;
 
         //create span to hold the name line
         const nameEl = document.createElement("span");
@@ -34,7 +35,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         resEl.appendChild(nameEl);
 
         //format address
-        const address = restaurants.data[i].address.formatted;
+        const address = restaurants.data[random].address.formatted;
 
         //create p to hold address
         const addressEl = document.createElement("p");
@@ -44,7 +45,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         resEl.appendChild(addressEl);
 
         //format phone
-        const phone = restaurants.data[i].restaurant_phone;
+        const phone = restaurants.data[random].restaurant_phone;
 
         //create p to hold phone
         const phoneEl = document.createElement("p");
@@ -54,7 +55,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         resEl.appendChild(phoneEl);
 
         //format hours
-        const hours = restaurants.data[i].hours;
+        const hours = restaurants.data[random].hours;
 
         //create p to hold phone
         const hoursEl = document.createElement("p");
