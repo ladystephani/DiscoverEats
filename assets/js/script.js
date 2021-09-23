@@ -45,7 +45,7 @@ const displayRestaurants = function(restaurants, zipcode) {
 
         // add class to js 
         // have to declare the class in css
-        
+
         //create p to hold address
         const addressEl = document.createElement("p");
         addressEl.textContent = address;
@@ -117,4 +117,7 @@ const formSubmitHandler = function(event) {
         alert("Please enter a zipcode")
     }
 }
+
+localStorage.setItem("search", "zipcode");
+ console.log(localStorage);
 userFormEl.addEventListener("submit", formSubmitHandler);
