@@ -84,7 +84,7 @@ const displayRestaurants = function(restaurants, zipcode) {
 
 const getRestaurantInfo = function(zipcode) {
     // format the restaurant API url
-    const apiUrl = 'https://api.documenu.com/v2/restaurants/zip_code/' + zipcode + '?key=45fcd1416d099b3d960f5878c61f0700'
+    const apiUrl = 'https://api.documenu.com/v2/restaurants/zip_code/' + zipcode + '?key=85f1b21e63c4501457407bbbd51c2bc9'
     
     // make a request to the url
     fetch(apiUrl).then(function(response) {
@@ -118,6 +118,8 @@ const formSubmitHandler = function(event) {
     }
 }
 
-localStorage.setItem("search", "zipcode");
+//local storage 
+localStorage.setItem("zipcode", JSON.stringify(restaurantEl));
  console.log(localStorage);
+
 userFormEl.addEventListener("submit", formSubmitHandler);
