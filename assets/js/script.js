@@ -87,7 +87,7 @@ const getRestaurantInfo = function(zipcode) {
     const apiUrl = 'https://api.documenu.com/v2/restaurants/zip_code/' + zipcode + '?key=85f1b21e63c4501457407bbbd51c2bc9'
     
     // make a request to the url
-    fetch(apiUrl).then(function(response) {
+    fetch('apiUrl').then(function(response) {
         //add zipcode not found error
         if (response.ok) {
             response.json().then(function(data) {
