@@ -15,26 +15,26 @@
     font-size: 30px;
     margin-bottom: 20px;
 }
-#zipcode-entry{
+
+/* #zipcode-entry{
     max-width: fit-content;
-}
+    margin-left: 120px;
+} */
 
 
-#search  {
-    font-size: 20px;
-    max-width: 400px;
-    width: 100%;
-}
 
 #restaurant-entry {
     font-size: 30px;
     max-width: 400px;
 }
 
-.box{
+.box {
     width: 100%;
     text-align:center;
     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .list-group {
@@ -56,13 +56,15 @@
     width: 1000px;
 }
 
-h2 {
+h2, h3 {
 color: brown;
 }
 
-.subtitle {
+.subtitle, #message {
     text-align: center;
 }
+
+
 #footer {
     width: 100%;
     text-align: center;  
