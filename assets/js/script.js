@@ -43,6 +43,9 @@ const displayRestaurants = function(restaurants, zipcode) {
         //format address
         const address = restaurants.data[random].address.formatted;
 
+        // add class to js 
+        // have to declare the class in css
+        
         //create p to hold address
         const addressEl = document.createElement("p");
         addressEl.textContent = address;

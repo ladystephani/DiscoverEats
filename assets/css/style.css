@@ -1,5 +1,6 @@
 :root {
     --white: #ffffff;
+    --greenblue: #26a69a;
 }
 
 * {
@@ -14,28 +15,36 @@
  .strawberry {
     font-size: 30px;
     margin-bottom: 20px;
+    color: var(--greenblue);
 }
-
-/* #zipcode-entry{
-    max-width: fit-content;
-    margin-left: 120px;
-} */
-
-
 
 #restaurant-entry {
     font-size: 30px;
     max-width: 400px;
 }
 
+/* search bar and text input */
 .box {
-    width: 100%;
     text-align:center;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+
+.btn {
+    color:var(--white);
+    background-color: #26a69a;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    letter-spacing: .5px;
+}
+
+
+
 
 .list-group {
     padding: 0;
@@ -56,14 +65,17 @@
     width: 1000px;
 }
 
-h2, h3 {
-color: brown;
-}
 
 .subtitle, #message {
     text-align: center;
+    color: brown;
 }
 
+#restaurant-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
 
 #footer {
     width: 100%;
