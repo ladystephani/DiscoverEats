@@ -119,7 +119,7 @@ const formSubmitHandler = function(event) {
 }
 
 //local storage 
-localStorage.setItem("zipcode", JSON.stringify(restaurantEl));
+localStorage.setItem("zipcode", JSON.stringify(getRestaurantInfo));
  console.log(localStorage);
 
 userFormEl.addEventListener("submit", formSubmitHandler);
