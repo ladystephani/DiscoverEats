@@ -1,6 +1,7 @@
 # DiscoverEats
-(story to build up app)
-(3 types of scenarios where this app will be useful)
+Meg just moved to New York and wants to see information about restaurants in her area, but she finds some popular apps to be too overwhelming...
+Han is a foodie and wants to explore restaurants in a different areas of New York whenever he has time. He just wants to check if there are restaurants that are open when he goes on the exploration...
+
 DiscoverEats - the best way to find restaurants in the food capital of the world.
 This app runs in the browser and assists people to search for restaurants in New York City.
 Users can search for specific zip codes to find top restaurant recommendations. 

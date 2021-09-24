@@ -30,6 +30,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         const resEl = document.createElement("div");
         resEl.classList = "list-item"
 
+
         //format the name line
         const restaurantName =  restaurants.data[random].restaurant_name;
 
@@ -116,10 +117,12 @@ const formSubmitHandler = function(event) {
     } else {
         alert("Please enter a zipcode")
     }
+
+    //local storage 
+localStorage.setItem("zipcode", JSON.stringify(zipcode));
+console.log(localStorage);
 }
 
-//local storage 
-localStorage.setItem("zipcode", JSON.stringify(getRestaurantInfo));
- console.log(localStorage);
+
 
 userFormEl.addEventListener("submit", formSubmitHandler);
