@@ -22,11 +22,22 @@ body {
     margin-bottom: 20px;
     color: var(--white);
     background-color: var(--red);
+   
+ .strawberry {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--greenblue);
+}
+
+#zipcode-entry {
+    font-size: 30px;
+    max-width: 200px;
 }
 
 /* search bar and text input */
 .box {
-    text-align:center;
+    text-align: center;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -43,7 +54,7 @@ body {
 
 /* Search bar */
 .btn {
-    color:var(--white);
+    color: var(--white);
     background-color: var(--red);
     text-align: center;
     font-size: 20px;
@@ -72,11 +83,6 @@ body {
     color: var(--red);
     /* text-decoration: none; */
 }
-
-/* .wrapper {
-    margin: 0 auto;
-    width: 1000px;
-} */
 
 /* Text underneath search bar */
 .subtitle, #message {
