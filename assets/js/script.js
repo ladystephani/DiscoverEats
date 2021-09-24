@@ -28,7 +28,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         var random = Math.floor(Math.random() * 12)
         //create a constainer for each restaurant
         const resEl = document.createElement("div");
-        resEl.classList = "list-item "
+        resEl.classList = "list-item"
 
 
         //format the name line
