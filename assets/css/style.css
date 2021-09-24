@@ -1,25 +1,24 @@
 :root {
     --white: #ffffff;
-    --greenblue: #26a69a;
+    --greenblue: #82738c;
 }
 
 * {
     box-sizing: border-box;
   }
 
-  body {
+body {
     background-image: url("https://user-images.githubusercontent.com/86330664/134235853-35268891-4826-41ac-886f-a61f1b368e5d.jpeg");
     background-color: #cccccc;
     background-repeat: no-repeat;
-  }
+}
 
-  body::before {
-    background-color: rgba(0,0,0,0.25);
-  }
+
  .strawberry {
     font-size: 40px;
     margin-bottom: 20px;
-    color: var(--greenblue);
+    color: white;
+    background-color: var(--greenblue);
 }
 
 #zipcode-entry {
@@ -40,15 +39,12 @@
 
 .btn {
     color:var(--white);
-    background-color: #26a69a;
+    background-color: #ff0080;
     text-align: center;
     font-size: 20px;
     width: 100%;
     letter-spacing: .5px;
 }
-
-
-
 
 .list-group {
     padding: 0;
@@ -56,6 +52,13 @@
 }
 
 .list-item {
+    padding: 1.5%;
+    background-color: var(--greenblue);
+    color: white;
+    text-decoration: none;
+    margin: 15px auto;
+    padding: 10px;
+    width: 60%;
     /* margin-bottom: 10px;
     padding: 1.5%; */
     background-color: #666666;
@@ -68,11 +71,13 @@
     width: 1000px;
 }
 
-
 .subtitle, #message {
     text-align: center;
-    color: brown;
-    font-size: 34px;
+    color: white;
+    background-color: var(--greenblue);
+    font-size: 28px;
+    width: 60%;
+    margin: 15px auto;
 }
 
 #restaurant-container {
@@ -88,7 +93,5 @@
     width: 100%;
     text-align: center;  
     font-size: 20px;      
-    position: fixed;
     bottom: 0;
   }
-
