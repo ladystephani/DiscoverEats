@@ -5,12 +5,9 @@ const restaurantSearchTerm = document.querySelector("#restaurant-search-term");
 let  subtitle = document.querySelector(".subtitle");
 let  message = document.querySelector("#message");
 
-
 const displayRestaurants = function(restaurants, zipcode) {
     // console.log(restaurants);
     // console.log(zipcode);
-
-   
 
     // error handler: check if API returned any restaurant data
     if (restaurants.data.length === 0) {
@@ -20,19 +17,20 @@ const displayRestaurants = function(restaurants, zipcode) {
 
     //clear old content every time search is performed
     restaurantContainerEl.textContent = "";
+    //show on page which zip code is entered
     restaurantSearchTerm.textContent = zipcode;
 
-
     // loop over restaurants
-    for (let i = 0; i < 6; i++) {
-        var random = Math.floor(Math.random() * 12)
+    for (let i = 0; i < restaurants.data.length; i++) {
+        // var random = Math.floor(Math.random() * 12)
+
         //create a constainer for each restaurant
         const resEl = document.createElement("div");
         resEl.classList = "list-item"
 
 
         //format the name line
-        const restaurantName =  restaurants.data[random].restaurant_name;
+        const restaurantName =  restaurants.data[i].restaurant_name;
 
         //create span to hold the name line
         const nameEl = document.createElement("span");
@@ -42,7 +40,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         resEl.appendChild(nameEl);
 
         //format address
-        const address = restaurants.data[random].address.formatted;
+        const address = restaurants.data[i].address.formatted;
 
         // add class to js 
         // have to declare the class in css
@@ -95,14 +93,26 @@ const getRestaurantInfo = function(zipcode) {
                 displayRestaurants(data, zipcode);
             })
         } else {
-            alert("Error: zipcode info not found");
+            // alert("Error: zipcode info not found");
+            //error text trigger
+            const modalEl = document.createElement("p");
+            // modalEl.classList = "waves-effect waves-light btn modal-trigger"
+            modalEl.classList = "list-item"
+            modalEl.textContent = "Error: zipcode info not found"
+            restaurantContainerEl.appendChild(modalEl)
         }  
     })
     .catch(function(error) {
-        alert("Unable to connect to network");
+        // alert("Unable to connect to network");
+        //error text trigger
+        const modalEl = document.createElement("p");
+        // modalEl.classList = "waves-effect waves-light btn modal-trigger"
+        modalEl.classList = "list-item"
+        modalEl.textContent = "Unable to connect to network"
+        restaurantContainerEl.appendChild(modalEl)
     })
-}
 
+    // GIF api
     console.log(fetch('https://api.giphy.com/v1/gifs/search?q=cheeseburgers&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'))
     .then(res => {
         if(res.ok) {
@@ -113,6 +123,7 @@ const getRestaurantInfo = function(zipcode) {
     })
     .then(res => console.log(data))
     .catch(error => console.log('No Cheeseburger For You'))
+}
 
 const formSubmitHandler = function(event) {
     event.preventDefault();
@@ -122,18 +133,28 @@ const formSubmitHandler = function(event) {
     if (zipcode) {
         getRestaurantInfo(zipcode);
         restaurantEl.value = "";
+
         // stops hiding subtitle and message from html 
         message.classList.remove('hide');
         subtitle.classList.remove('hide');
     } else {
-        alert("Please enter a zipcode")
+        // alert("Please enter a zipcode")
+        // error text trigger
+        const modalEl = document.createElement("p");
+        // modalEl.classList = "waves-effect waves-light btn modal-trigger"
+        modalEl.classList = "list-item"
+        modalEl.textContent = "Please enter a zipcode"
+        restaurantContainerEl.appendChild(modalEl)
     }
 
     //local storage 
-localStorage.setItem("zipcode", JSON.stringify(zipcode));
-console.log(localStorage);
+    localStorage.setItem("zipcode", JSON.stringify(zipcode));
+    console.log(localStorage);
 }
 
-
-
 userFormEl.addEventListener("submit", formSubmitHandler);
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.modal');
+//     var instances = M.Modal.init(elems, options);
+//   });
