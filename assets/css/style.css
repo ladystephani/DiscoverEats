@@ -88,8 +88,8 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--lightgray);
-    font-size: 10px;
+    color: var(--gray);
+    font-size: 26px;
 } 
  
 #footer {
