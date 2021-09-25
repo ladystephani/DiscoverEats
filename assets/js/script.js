@@ -105,17 +105,7 @@ const getRestaurantInfo = function(zipcode) {
     })
 }
 
-    console.log(fetch('https://api.giphy.com/v1/gifs/search?q=cheeseburgers&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'))
-    .then(res => {
-        if(res.ok) {
-            console.log('SUCCESS')
-        }   else {
-            console.log("UNSUCCESSFUL")
-        }
-    })
-    .then(res => console.log(data))
-    .catch(error => console.log('No Cheeseburger For You'))
-
+    
 const formSubmitHandler = function(event) {
     event.preventDefault();
     // get value from the input element
@@ -136,6 +126,32 @@ localStorage.setItem("zipcode", JSON.stringify(zipcode));
 console.log(localStorage);
 }
 
+function myFunction() {
+    var searchTerm = document.querySelector('#searchTerm').value;
 
+    fetch(
+        'https://api.giphy.com/v1/gifs/search?q=' +
+          searchTerm +
+          '&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1'
+      )
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(response) {
+          console.log(response.data[0]);
+          // Create a variable that will select the <div> where the GIF will be displayed
+          var responseContainerEl = document.querySelector('#response-container');
+     // Empty out the <div> before we append a GIF to it
+      // the initial div that was searched for does not stay because this is used, it empties everything out
+      responseContainerEl.innerHTML = '';
+
+
+      var gifImg = document.createElement('img');
+      gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+
+      // Append 'gifImg' to the <div>
+      responseContainerEl.appendChild(gifImg);
+    });
+}
 
 userFormEl.addEventListener("submit", formSubmitHandler);
