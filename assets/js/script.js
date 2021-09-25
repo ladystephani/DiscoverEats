@@ -103,6 +103,7 @@ const getRestaurantInfo = function(zipcode) {
     })
 }
 
+<<<<<<< HEAD
     // console.log(fetch('https://api.giphy.com/v1/gifs/search?q=cheeseburgers&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'))
     // .then(res => {
     //     if(res.ok) {
@@ -113,6 +114,18 @@ const getRestaurantInfo = function(zipcode) {
     // })
     // .then(res => console.log(data))
     // .catch(error => console.log('No Cheeseburger For You'))
+=======
+    console.log(fetch('https://api.giphy.com/v1/gifs/search?q=cheeseburgers&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN'))
+    .then(res => {
+        if(res.ok) {
+            console.log('SUCCESS')
+        }   else {
+            console.log("UNSUCCESSFUL")
+        }
+    })
+    .then(res => console.log(data))
+    .catch(error => console.log('No Cheeseburger For You'))
+>>>>>>> 3cf1879fc22e648ed18fdde6a3abaecf76e6dbcb
 
 const formSubmitHandler = function(event) {
     event.preventDefault();
