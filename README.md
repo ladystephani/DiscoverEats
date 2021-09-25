@@ -21,10 +21,10 @@ It is made with HTML, CSS, JavaScript and Materialize UI, as well as the Documen
 
 ## Website
 Link to the GIT repository: <br>
-https://github.com/Hiroshi777300ER/DiscoverEats
+https://github.com/ladystephani/DiscoverEats
 
 Link to the Live Page: <br>
-https://hiroshi777300er.github.io/DiscoverEats/
+https://ladystephani.github.io/DiscoverEats/
 
 ## Contribution
 Made with ❤️ by Mohammad Ibrahim, Hiroshi Tanaka, and Jessie Li.
