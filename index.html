@@ -4,36 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize Link CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Link to css style sheet -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>DiscoverEats</title>
 </head>
 <body>
+
   <!--Used Materialize UI for navBar-->
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">DiscoverEats</a>
+      <a href="index.html" class="brand-logo center">DiscoverEats</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#search">Search</a></li>
       </ul>
     </div>
   </nav>
+
     <!--Main Section-->   
   <div class="box">
+    <!-- h2 tag under title -->
     <h2 class="strawberry">Search for a Restaurant:</h2>
     <form id="user-form" class="card-body">
+      <!-- Zipcode entry box -->
       <label for="zipcode-entry"></label>
       <input type="text" placeholder="Enter Zip Code" autofocus="true" maxlength="five"
       id="zipcode-entry" class="form-input" /> 
+      <!-- Search Button -->
       <button type="submit" class="btn" id="search">Search</button> 
     </form>
   </div>
 
+  <!-- Text underneath Search bar -->
   <div>
     <h2 class="subtitle hide">Showing top restaurants for the following zipcode: <span id="restaurant-search-term"></span></h2>
     <h3 id= "message" class="hide">Re-enter Zip Code for a new list of restaurants</h3>
+
+    <!-- Contains all restaurant info -->
     <div id="restaurant-container" class="list-group"></div>
   </div>
 
