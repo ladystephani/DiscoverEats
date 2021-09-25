@@ -4,17 +4,39 @@
     --red: #ff0080;
     --lightgray: #666666;
 }
-
+ 
 * {
     box-sizing: border-box;
   }
-
+ 
   /* background img in body */
 body {
     background-image: url("https://user-images.githubusercontent.com/86330664/134235853-35268891-4826-41ac-886f-a61f1b368e5d.jpeg");
     background-color: var(--lightgray);
     background-repeat: no-repeat;
 }
+ 
+main {
+    min-height: 100vh;
+}
+ 
+#searchTerm {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--white);
+    background-color: var(--red);
+    text-align: center;
+    width: 60%;
+}
+
+#response-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--gray);
+    font-size: 26px;
+} 
 
 /* Search for a restaurant */
  .strawberry {
@@ -22,22 +44,11 @@ body {
     margin-bottom: 20px;
     color: var(--white);
     background-color: var(--red);
-   
- .strawberry {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: white;
-    background-color: var(--greenblue);
 }
-
-#zipcode-entry {
-    font-size: 30px;
-    max-width: 200px;
-}
-
+ 
 /* search bar and text input */
 .box {
-    text-align: center;
+    text-align:center;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -45,21 +56,31 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+ 
 /*  Text box for zipcode */
 #zipcode-entry {
     font-size: 30px;
     max-width: 200px;
 }
-
+ 
 /* Search bar */
 .btn {
-    color: var(--white);
+    color:var(--white);
     background-color: var(--red);
     text-align: center;
     font-size: 20px;
     width: 100%;
     letter-spacing: .5px;
+}
+ 
+.btn1 {
+    color:var(--white);
+    background-color: var(--red);
+    text-align: center;
+    font-size: 30px;
+    max-width: 100%;
+    letter-spacing: .5px;
+    margin-left: 20px;
 }
 
 /* Restaurant list */
@@ -67,7 +88,7 @@ body {
     padding: 0;
     list-style: none;
 }
-
+ 
 /* Restaurant list */
 .list-item {
     padding: 1.5%;
@@ -77,35 +98,32 @@ body {
     margin: 15px auto;
     padding: 10px;
     width: 60%;
-    /* margin-bottom: 10px;
-    padding: 1.5%; */
-    background-color: var(--lightgray);
-    color: var(--red);
-    /* text-decoration: none; */
 }
-
+ 
+ 
 /* Text underneath search bar */
 .subtitle, #message {
     text-align: center;
     color: var(--white);
-    background-color: var(--gray);
+    background-color: var(--red);
     font-size: 28px;
     width: 60%;
     margin: 15px auto;
 }
-
+ 
 #restaurant-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     color: var(--gray);
+    font-size: 26px;
 } 
-
+ 
 #footer {
     width: 100%;
     text-align: center;  
     font-size: 20px;   
     bottom: 0px;   
-    position: fixed;
   }
+ 
