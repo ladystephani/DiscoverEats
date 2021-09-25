@@ -111,7 +111,7 @@ const getRestaurantInfo = function(zipcode) {
             console.log("UNSUCCESSFUL")
         }
     })
-    .then(res => console.log(data))
+    .then(_res => console.log(data))
     .catch(error => console.log('No Cheeseburger For You'))
 
 const formSubmitHandler = function(event) {
