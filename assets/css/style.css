@@ -21,12 +21,12 @@ main {
 }
  
 #searchTerm {
-    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
     color: var(--white);
     background-color: var(--red);
-    font-size: 28px;
-    max-width: 500px;
-    margin: 15px auto;
+    text-align: center;
+    width: 60%;
 }
 
 #response-container {
@@ -77,9 +77,10 @@ main {
     color:var(--white);
     background-color: var(--red);
     text-align: center;
-    font-size: 20px;
-    max-width: 500px;
+    font-size: 30px;
+    max-width: 100%;
     letter-spacing: .5px;
+    margin-left: 20px;
 }
 
 /* Restaurant list */
