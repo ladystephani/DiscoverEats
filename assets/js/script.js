@@ -55,7 +55,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         resEl.appendChild(addressEl);
 
         //format phone
-        const phone = restaurants.data[random].restaurant_phone;
+        const phone = restaurants.data[i].restaurant_phone;
 
         //create p to hold phone
         const phoneEl = document.createElement("p");
@@ -65,7 +65,7 @@ const displayRestaurants = function(restaurants, zipcode) {
         resEl.appendChild(phoneEl);
 
         //format hours
-        const hours = restaurants.data[random].hours;
+        const hours = restaurants.data[i].hours;
 
         //create p to hold phone
         const hoursEl = document.createElement("p");
@@ -113,6 +113,7 @@ const getRestaurantInfo = function(zipcode) {
         modalEl.textContent = "Unable to connect to network"
         restaurantContainerEl.appendChild(modalEl)
     })
+}
 
 const formSubmitHandler = function(event) {
     event.preventDefault();
@@ -148,7 +149,7 @@ function myFunction() {
         'https://api.giphy.com/v1/gifs/search?q=' +
           searchTerm +
           '&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1'
-      )
+    )
         .then(function(response) {
           return response.json();
         })
@@ -156,16 +157,16 @@ function myFunction() {
           console.log(response.data[0]);
           // Create a variable that will select the <div> where the GIF will be displayed
           var responseContainerEl = document.querySelector('#response-container');
-     // Empty out the <div> before we append a GIF to it
-      // the initial div that was searched for does not stay because this is used, it empties everything out
-      responseContainerEl.innerHTML = '';
+    // Empty out the <div> before we append a GIF to it
+    // the initial div that was searched for does not stay because this is used, it empties everything out
+    responseContainerEl.innerHTML = '';
 
 
-      var gifImg = document.createElement('img');
-      gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+    var gifImg = document.createElement('img');
+    gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
 
-      // Append 'gifImg' to the <div>
-      responseContainerEl.appendChild(gifImg);
+    // Append 'gifImg' to the <div>
+    responseContainerEl.appendChild(gifImg);
     });
 }
 
